@@ -10,6 +10,7 @@ app.use(router)
 // 全局配置参数
 const globalConfig = {
     currentWordList: [], //word list
+    currentBook: {}
 };
 // 读取本地保存的App设置
 const storedSettings = localStorage.getItem('AppSettings');

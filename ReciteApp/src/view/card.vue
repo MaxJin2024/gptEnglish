@@ -15,7 +15,7 @@
         </div>
         <div class="sentence">
           <span class="audio" @click="playAudio(currentWord.sentence)"><van-icon name="volume" color="#1A89FA" /></span>
-          {{ currentWord.sentence }}（{{ currentWord.sentence_chinese }}）
+          {{ currentWord.sentence }}<span v-if="currentWord.sentence_chinese">（{{ currentWord.sentence_chinese }}）</span>
         </div>
       </div>
       <div v-if="!isAllWordsLoaded" class="buttons">
@@ -23,7 +23,7 @@
         <van-button type="danger" @click="dontKnowWord">&#128531; 不认识</van-button>
       </div>
       <div v-if="isAllWordsLoaded" class="completion-message">
-        恭喜！本类别学习完成！
+        🎉 🎉 🎉  恭喜！本类别学习完成！
         <div class="buttons">
           <van-button type="primary">测试</van-button>&nbsp;&nbsp;
           <van-button type="default" @click="goBack">返回</van-button>

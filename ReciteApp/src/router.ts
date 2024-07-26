@@ -5,15 +5,23 @@ const routes = [
     name: 'notFound',
     path: '/:path(.*)+',
     redirect: {
-      name: 'wordlist'
+      name: 'home'
     }
   },
   {
-    name: 'wordlist',
-    path: '/wordlist',
-    component: () => import('@/view/wordlist.vue'),
+    name: 'home',
+    path: '/',
+    component: () => import('@/view/home.vue'),
     meta: {
-      title: 'wordlist'
+      title: 'home'
+    }
+  },
+  {
+    name: 'book',
+    path: '/book',
+    component: () => import('@/view/book.vue'),
+    meta: {
+      title: 'book'
     }
   },
   {
